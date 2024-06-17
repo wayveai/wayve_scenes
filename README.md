@@ -80,7 +80,7 @@ To set up your environment, follow these steps:
     First, clone the repository to your local machine using Git:
 
     ```bash
-    git clone git@github.com:wayveai/wayve_scenes.git
+    git clone https://github.com/wayveai/wayve_scenes.git
     cd wayve_scenes
     ```
 
