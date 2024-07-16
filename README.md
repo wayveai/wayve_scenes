@@ -176,6 +176,20 @@ We're planning to host a public challenge with new scenes and an evaluation serv
 
 We release the first version of the dataset.
 
+## Citation
+
+```BibTeX
+@misc{zürn2024wayvescenes101datasetbenchmarknovel,
+      title={WayveScenes101: A Dataset and Benchmark for Novel View Synthesis in Autonomous Driving}, 
+      author={Jannik Zürn and Paul Gladkov and Sofía Dudas and Fergal Cotter and Sofi Toteva and Jamie Shotton and Vasiliki Simaiaki and Nikhil Mohan},
+      year={2024},
+      eprint={2407.08280},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2407.08280}, 
+}
+```
+
 
 ## Dataset Metadata
 The following table is necessary for this dataset to be indexed by search
