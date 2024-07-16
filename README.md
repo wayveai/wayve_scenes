@@ -178,6 +178,7 @@ We release the first version of the dataset.
 
 ## Citation
 
+```text
 @misc{zürn2024wayvescenes101datasetbenchmarknovel,
       title={WayveScenes101: A Dataset and Benchmark for Novel View Synthesis in Autonomous Driving}, 
       author={Jannik Zürn and Paul Gladkov and Sofía Dudas and Fergal Cotter and Sofi Toteva and Jamie Shotton and Vasiliki Simaiaki and Nikhil Mohan},
@@ -185,8 +186,9 @@ We release the first version of the dataset.
       eprint={2407.08280},
       archivePrefix={arXiv},
       primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2407.08280} 
+      url={https://arxiv.org/abs/2407.08280}, 
 }
+```
 
 
 ## Dataset Metadata
