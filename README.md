@@ -152,7 +152,7 @@ The camera arrangement on the vehicle is illustrated below.
 - Distortion model: Fisheye Distortion
 - Resolution: 1920 x 1080 pixels
 - Temporal resolution: 10 Hz
-- Calibration: We provide both extrinsic and intrinsic camera calibration for all scenes as part of the COLMAP files. We also provide metric camera poses in `data/camera_transforms.json`
+- Calibration: We provide both extrinsic and intrinsic camera calibration for all scenes as part of the COLMAP files. We also provide metric camera-to-camera distances in `data/baselines.json`
 
 ### Masks
 
