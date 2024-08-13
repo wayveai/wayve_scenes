@@ -50,11 +50,10 @@ We made our WayveScenes101 dataset available [on Google Drive](https://drive.goo
 
 ### Downloading the full dataset with gdown
 
-If you wish to download the full dataset in one go with  `gdown`, please run the following commands:
+If you wish to download the full dataset in one go, please run the following commands:
 
 ```bash
-pip install gdown
-gdown --folder 1XXlhGut7c5PVeBj4qwORlHoGdeSYxGgt -O /path/to/wayve_scenes_101 --remaining-ok 
+bash download.sh /path/to/wayve_scenes_101
 ```
 
 
@@ -179,14 +178,11 @@ We release the first version of the dataset.
 ## Citation
 
 ```BibTeX
-@misc{zürn2024wayvescenes101datasetbenchmarknovel,
-      title={WayveScenes101: A Dataset and Benchmark for Novel View Synthesis in Autonomous Driving}, 
-      author={Jannik Zürn and Paul Gladkov and Sofía Dudas and Fergal Cotter and Sofi Toteva and Jamie Shotton and Vasiliki Simaiaki and Nikhil Mohan},
-      year={2024},
-      eprint={2407.08280},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2407.08280}, 
+@article{zurn2024wayvescenes101,
+  title={WayveScenes101: A Dataset and Benchmark for Novel View Synthesis in Autonomous Driving},
+  author={Z{\"u}rn, Jannik and Gladkov, Paul and Dudas, Sof{\'\i}a and Cotter, Fergal and Toteva, Sofi and Shotton, Jamie and Simaiaki, Vasiliki and Mohan, Nikhil},
+  journal={arXiv preprint arXiv:2407.08280},
+  year={2024}
 }
 ```
 
