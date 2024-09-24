@@ -103,13 +103,6 @@ declare -a LINKS=(
     "https://drive.google.com/file/d/1rf3rAVE6Zw1S23UBhL6yobP5flR93ew5/view?usp=drive_link"
 )
 
-
-declare -a LINKS=(
-    "https://drive.google.com/file/d/1dwcYuvs13ftDr6zql2ZJd0b5Fodh7F8I/view?usp=drive_link" 
-)
-
-
-
 # Check if the user provided an argument (directory path)
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <download_directory>"
