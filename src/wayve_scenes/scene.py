@@ -133,11 +133,13 @@ class WayveScene():
             cam_props = reconstruction.cameras[img.camera_id]
             intrinsics = cam_props.calibration_matrix()
             intrinsics = torch.from_numpy(intrinsics).float()[None]
+            distortion_params = torch.from_numpy(cam_props.params[4:]).float()
 
             # Colmap output is G_cam_world (projection from world to camera) - https://colmap.github.io/format.html#
             g_opencv_cam = transmat.fast_inverse(transmat.matrix_from_rotation_translation(rot, tvec))
             record["focal_length"] = intrmat.get_focal_lengths(intrinsics)[0]
             record["principal_point"] = intrmat.get_principal_point(intrinsics)[0]
+            record["distortion_params_k1_k2_k3_k4"] = distortion_params
             record["g_world_cam"] = opencv_pose_to_wayve_pose(g_rdf_any=g_opencv_cam[0])
             timestamp, position = int(Path(img.name).stem), Path(img.name).parent.name
 
