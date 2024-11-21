@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "wayve_scenes"
+version = "0.1.0"
+description = "Evaluation API for the WayveScenes101 Dataset"
+homepage = "http://wayve.ai/science/wayvescenes101"
+authors = ['Wayve Technologies Ltd <hello@wayve.ai>']
+license = "MIT"
+readme = "README.md"
+classifiers = [
+    # Choose classifiers from https://pypi.org/classifiers/
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python :: 3.10',
+    "Environment :: GPU"
+]
+keywords=["Autonomous Driving", "Scene Reconstruction", "Gaussian Splatting", "Neural Radiance Fields", "Benchmark", "Evaluation"]
+
+packages = [
+    { include = "wayve_scenes", from = "src" },
+]
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.14"
+dash = "^2.17.0"
+flask = "^3.0.3"
+plotly = "^5.24.1"
+opencv-python = "^4.10.0.84"
+pycolmap = "^3.10.0"
+torch = ">=2.1,<2.4"
+scipy = "^1.14.1"
+tqdm = "^4.67.0"
+numpy = "^2.1.3"
+nerfstudio = "^1.1.5"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+donwload = {reference = "download.sh", type = "file"}
