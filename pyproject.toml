@@ -1,0 +1,47 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wayve_scenes"
+version = "0.3.0"
+description = "Evaluation API for the WayveScenes101 Dataset"
+authors = [
+    {name = 'Wayve Technologies Ltd', email = 'hello@wayve.ai'},
+]
+readme = "README.md"
+license = {file = "LICENSE"}
+classifiers = [
+    # Choose classifiers from https://pypi.org/classifiers/
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'Programming Language :: Python :: 3.10',
+    "Environment :: GPU",
+    "License :: OSI Approved :: MIT License",
+]
+keywords=["Autonomous Driving", "Scene Reconstruction", "Gaussian Splatting", "Neural Radiance Fields", "Benchmark", "Evaluation"]
+
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "dash>=2.17,<2.18",
+    "flask>=3.0,<3.1",
+    "plotly>=5.24,<5.25",
+    "opencv-python>=4.10,<4.11",
+    "pycolmap>=3.10,<3.11",
+    "torch>=2.1,<2.4",
+    "scipy>=1.14,<1.15",
+    "tqdm>=4.67,<4.68",
+    "numpy>=2.1,<2.2",
+    "nerfstudio>=1.1.5",
+    "einops>=0.8.0,<0.9.0",
+    "torchmetrics>=1.4,<1.5",
+]
+
+[project.urls]
+Homepage = "http://wayve.ai/science/wayvescenes101"
+
+[tool.setuptools]
+script-files = ["download.sh"]
+
+[tool.setuptools.packages.find]
+where = ["src/"]
