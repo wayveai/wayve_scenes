@@ -24,7 +24,11 @@ def as_matrix(focal_lengths: torch.Tensor, principal_points: torch.Tensor) -> to
     if principal_points.ndim == 1:
         principal_points = principal_points.unsqueeze(0)
 
-    intrinsics = repeat(torch.eye(3, device=focal_lengths.device), "... -> n ...", n=len(focal_lengths)).clone()
+    dtype = torch.promote_types(focal_lengths.dtype, principal_points.dtype)
+    if not dtype.is_floating_point:
+        dtype = torch.get_default_dtype()
+
+    intrinsics = repeat(torch.eye(3, dtype=dtype, device=focal_lengths.device), "... -> n ...", n=len(focal_lengths)).clone()
     intrinsics[:, 0, 0] = focal_lengths[:, 0]
     intrinsics[:, 1, 1] = focal_lengths[:, 1]
     intrinsics[:, 0, 2] = principal_points[:, 0]
