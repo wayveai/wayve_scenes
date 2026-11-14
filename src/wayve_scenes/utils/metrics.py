@@ -171,7 +171,7 @@ def compute_ssim(pred: torch.Tensor, target: torch.Tensor, mask: Optional[torch.
         mask = torch.nn.functional.pad(
             mask, (kernel_size // 2, kernel_size // 2, kernel_size // 2, kernel_size // 2), mode="constant", value=0
         )
-        mask = torch.nn.functional.max_pool2d(mask, kernel_size, stride=1)
+        mask = -torch.nn.functional.max_pool2d(-mask, kernel_size, stride=1)
         return mask > 0
 
     mask_eroded = erode_mask(mask)
