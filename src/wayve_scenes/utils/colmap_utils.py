@@ -70,9 +70,9 @@ def colmap_to_json(
             "transform_matrix": c2w.tolist(),
             "colmap_im_id": im_id,
         }
-        if use_masks is not None:
+        if use_masks:
             # replace .jpeg with .png and images/ with masks/
-            mask_path = str(name).replace("images/", "masks/").replace(".jpeg", ".png")
+            mask_path = Path("masks") / Path(im_data.name).with_suffix(".png")
             frame["mask_path"] = Path(mask_path).as_posix()
             
             # We have to convert the mask images to a binary mask (1-channel 8bit PNG)
